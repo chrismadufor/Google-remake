@@ -1,0 +1,257 @@
+html {
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  color: rgba(110, 110, 110, 0.9);
+  font-size: 12px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  position: relative;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: inline-block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  width: 100%;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px;
+}
+.user {
+  padding: 10px;
+  display: flex;
+  width: 120px;
+  height: 60px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.user img {
+  border-radius: 50%;
+  /* margin-left: 15px; */
+}
+
+.user-image {
+  height: 35px;
+  width: 35px;
+  margin-left: 15px;
+}
+.product-icon {
+  height: 25px;
+  width: 25px;
+}
+.nav {
+  padding: 10px;
+  width: 110px;
+  display: flex;
+  justify-content: space-around;
+}
+.nav-link {
+  font-weight: 600;
+}
+.nav.wide-screen {
+  display: flex;
+  font-size: 13px;
+  margin-right: 10px;
+  width: 140px;
+}
+.active {
+  border-bottom: 2px solid rgb(66, 66, 66);
+}
+.main {
+  margin: 50px 0 0 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logo {
+  width: 170px;
+  margin: 0 auto;
+}
+.search-bar {
+  width: 95%;
+  height: 45px;
+  margin: 20px;
+  position: relative;
+}
+input {
+  width: 100%;
+  height: 100%;
+  padding: 5px 50px;
+  border-radius: 50px;
+  border: 1px solid #dfe1e5;
+  outline: none;
+}
+.search-icon {
+  font-size: 16px;
+  position: absolute;
+  top: 13px;
+  left: 18px;
+}
+.mic {
+  height: 22px;
+  width: 22px;
+  vertical-align: middle;
+  position: absolute;
+  top: 13px;
+  right: 18px;
+}
+.button-container {
+  margin: 20px;
+  display: flex;
+  align-items: center;
+}
+.btn {
+  padding: 10px 15px;
+  margin: 0 10px;
+  border: 0;
+  color: #1f2229;
+  background-color: #f2f6ff;
+}
+.lang li {
+  margin: 0 5px;
+}
+.lang p {
+  color: black;
+  font-size: 13px;
+}
+.lang a {
+  color: blue;
+  font-size: 13px;
+}
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+  background-color: rgb(235, 238, 238);
+  color: #70757a;
+}
+.country {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 5px 0 0 25px;
+}
+.carbon {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.carbon img {
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
+}
+.footer-nav {
+  /* padding: 10px 0 15px 0; */
+  text-align: center;
+  width: 270px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer-nav * {
+  margin: 5px;
+}
+.footer-nav-lg {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 12px;
+}
+.footer-links-left {
+  float: left;
+}
+.footer-links-right {
+  float: right;
+}
+.footer-links-left a,
+.footer-links-right a {
+  margin: 7px;
+}
+.my-info {
+  text-align: center;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 450px) {
+  .wide-screen {
+    display: none;
+  }
+  .nav.wide-screen {
+    display: none;
+  }
+}
+@media (min-width: 451px) {
+  .wide-screen {
+    display: block;
+  }
+  .small-screen {
+    display: none;
+  }
+  header {
+    justify-content: flex-end;
+  }
+  .main {
+    margin: 50px 0;
+  }
+  .lang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .lang p {
+    margin-right: 5px;
+  }
+  .logo {
+    width: 280px;
+  }
+  .search-bar {
+    width: 80%;
+    max-width: 550px;
+  }
+  .carbon {
+    display: none;
+  }
+}
+@media (min-width: 900px) {
+  .footer-nav-lg {
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .footer-links-left,
+  .footer-links-right {
+    float: none;
+  }
+  .carbon {
+    display: inherit;
+  }
+}
